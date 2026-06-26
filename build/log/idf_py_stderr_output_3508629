@@ -1,0 +1,106 @@
+Command: cmake -G Ninja -B /home/neet821/Desktop/wuxiankeneng/smart_home_controller/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/neet821/.espressif/python_env/idf6.0_py3.14_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=False /home/neet821/Desktop/wuxiankeneng/smart_home_controller
+CMake Warning at /home/neet821/.espressif/v6.0.1/esp-idf/tools/cmake/build.cmake:695 (message):
+  WARNING: Component name "esp-lib-utils" doesn't match the directory name
+  "espressif__esp-lib-utils".
+
+  ESP-IDF CMake build system uses directory names as names of components, so
+  different names may break requirements resolution.  To avoid the problem
+  rename the component directory to "esp-lib-utils"
+
+Call Stack (most recent call first):
+  /home/neet821/.espressif/v6.0.1/esp-idf/tools/cmake/project.cmake:773 (idf_build_process)
+  CMakeLists.txt:7 (project)
+
+
+Configuration Report                                                            
+ ────────────────────────────────────────────────────────────────────────────── 
+   Parser Version: 1                                                            
+   Verbosity: default                                                           
+   Defaults policy: sdkconfig                                                   
+   Status: Finished with notifications                                          
+                                                                                
+  Disabled Symbols/Choices With User-Set Value                                  
+   ──────────────────────────────────────────────────────────────────────────   
+    * ESP_INTR_IN_IRAM (defined at                                              
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/esp_hw_support/Kconf…    
+    with user-set value y from                                                  
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+    * LIBC_MISC_IN_IRAM (defined at                                             
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/esp_libc/Kconfig:45)     
+    with user-set value y from                                                  
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+    * ESP_ROM_PRINT_IN_IRAM (defined at                                         
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/esp_rom/Kconfig:3)       
+    with user-set value y from                                                  
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+    * ESP_CONSOLE_UART_BAUDRATE (defined at                                     
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/esp_stdio/Kconfig:15…    
+    with user-set value 115200 from                                             
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+    * ESP_SYSTEM_IN_IRAM (defined at                                            
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/esp_system/Kconfig:1…    
+    with user-set value y from                                                  
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+    * ESP_TIMER_IN_IRAM (defined at                                             
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/esp_timer/Kconfig:3)     
+    with user-set value y from                                                  
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+    * LOG_IN_IRAM (defined at                                                   
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/log/Kconfig:55) with     
+    user-set value y from                                                       
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+    * SPI_FLASH_PLACE_FUNCTIONS_IN_IRAM (defined at                             
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/spi_flash/Kconfig:17…    
+    with user-set value y from                                                  
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+   ──────────────────────────────────────────────────────────────────────────   
+ ────────────────────────────────────────────────────────────────────────────── 
+CMake Warning at /home/neet821/.espressif/v6.0.1/esp-idf/tools/cmake/project.cmake:786 (message):
+  Missing kconfig option.  Re-run the build process...
+Call Stack (most recent call first):
+  CMakeLists.txt:7 (project)
+
+
+Configuration Report                                                            
+ ────────────────────────────────────────────────────────────────────────────── 
+   Parser Version: 1                                                            
+   Verbosity: default                                                           
+   Defaults policy: sdkconfig                                                   
+   Status: Finished with notifications                                          
+                                                                                
+  Disabled Symbols/Choices With User-Set Value                                  
+   ──────────────────────────────────────────────────────────────────────────   
+    * ESP_INTR_IN_IRAM (defined at                                              
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/esp_hw_support/Kconf…    
+    with user-set value y from                                                  
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+    * LIBC_MISC_IN_IRAM (defined at                                             
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/esp_libc/Kconfig:45)     
+    with user-set value y from                                                  
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+    * ESP_ROM_PRINT_IN_IRAM (defined at                                         
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/esp_rom/Kconfig:3)       
+    with user-set value y from                                                  
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+    * ESP_CONSOLE_UART_BAUDRATE (defined at                                     
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/esp_stdio/Kconfig:15…    
+    with user-set value 115200 from                                             
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+    * ESP_SYSTEM_IN_IRAM (defined at                                            
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/esp_system/Kconfig:1…    
+    with user-set value y from                                                  
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+    * ESP_TIMER_IN_IRAM (defined at                                             
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/esp_timer/Kconfig:3)     
+    with user-set value y from                                                  
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+    * LOG_IN_IRAM (defined at                                                   
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/log/Kconfig:55) with     
+    user-set value y from                                                       
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+    * SPI_FLASH_PLACE_FUNCTIONS_IN_IRAM (defined at                             
+    /home/neet821/.espressif/v6.0.1/esp-idf/components/spi_flash/Kconfig:17…    
+    with user-set value y from                                                  
+    /home/neet821/Desktop/wuxiankeneng/smart_home_controller/sdkconfig          
+   ──────────────────────────────────────────────────────────────────────────   
+ ────────────────────────────────────────────────────────────────────────────── 

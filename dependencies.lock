@@ -1,0 +1,243 @@
+dependencies:
+  brookesia/brookesia_app_factory_guide:
+    dependencies:
+    - name: brookesia_system_core
+      path: ../brookesia_system_core
+      public: true
+    - name: espressif/brookesia_system_phone
+      path: ../brookesia_system_phone
+      public: true
+      version: 0.7.*
+    source:
+      path: common_components/brookesia_app_factory_guide
+      type: local
+    version: 0.6.0
+  brookesia_app_temperature:
+    dependencies:
+    - name: brookesia_system_core
+      path: ../brookesia_system_core
+      public: true
+    - name: espressif/brookesia_system_phone
+      path: ../brookesia_system_phone
+      public: true
+      version: 0.7.*
+    - name: espressif/i2c_bus
+      public: true
+      version: ^1.0.0
+    source:
+      path: common_components/brookesia_app_temperature
+      type: local
+    version: 0.6.0
+  brookesia_system_core:
+    dependencies:
+    - name: idf
+      version: '>=5.3'
+    - name: espressif/cmake_utilities
+      public: true
+      version: 0.*
+    - name: esp-lib-utils
+      override_path: ../espressif__esp-lib-utils
+      public: true
+    - name: espressif/esp-boost
+      public: true
+      version: 0.4.*
+    - name: lvgl/lvgl
+      public: true
+      version: 9.3.*
+    source:
+      path: common_components/brookesia_system_core
+      type: local
+    version: 0.7.0
+  esp-lib-utils:
+    dependencies:
+    - name: idf
+      version: '>=5.4'
+    source:
+      path: common_components/espressif__esp-lib-utils
+      type: local
+    version: 0.3.1
+  espressif/brookesia_system_core:
+    dependencies:
+    - name: idf
+      version: '>=5.3'
+    - name: espressif/cmake_utilities
+      public: true
+      version: 0.*
+    - name: esp-lib-utils
+      override_path: ../espressif__esp-lib-utils
+      public: true
+    - name: espressif/esp-boost
+      public: true
+      version: 0.4.*
+    - name: lvgl/lvgl
+      public: true
+      version: 9.3.*
+    source:
+      path: common_components/brookesia_system_core
+      type: local
+    version: 0.7.0
+  espressif/brookesia_system_phone:
+    dependencies:
+    - name: idf
+      version: '>=5.3'
+    - name: espressif/brookesia_system_core
+      path: ../brookesia_system_core
+      public: true
+      version: 0.7.*
+    source:
+      path: common_components/brookesia_system_phone
+      type: local
+    version: 0.7.0
+  espressif/cmake_utilities:
+    component_hash: 351350613ceafba240b761b4ea991e0f231ac7a9f59a9ee901f751bddc0bb18f
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.1'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.5.3
+  espressif/esp-boost:
+    component_hash: 2e72ec31750aabdf7f245d312e4f527dcc79be710095b158df76a4f8f47be6ea
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.3'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 0.4.2
+  espressif/esp_board_manager:
+    component_hash: e6b52add83cb1e83fad6ba52fd526f1e1797402b5550a44d6ef6e0a536a9bc10
+    dependencies:
+    - matches:
+      - if: $CONFIG{ESP_BOARD_DEV_BUTTON_SUPPORT} == True
+      name: espressif/button
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^4.1.4
+    - matches:
+      - if: $CONFIG{ESP_BOARD_DEV_AUDIO_CODEC_SUPPORT} == True
+      name: espressif/esp_codec_dev
+      registry_url: https://components.espressif.com
+      require: private
+      version: ~1.5
+    - matches:
+      - if: $CONFIG{ESP_BOARD_DEV_GPIO_EXPANDER_SUPPORT} == True
+      name: espressif/esp_io_expander
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.0.1
+    - matches:
+      - if: $CONFIG{ESP_BOARD_DEV_LCD_TOUCH_I2C_SUPPORT} == True
+      - if: $CONFIG{ESP_BOARD_DEV_LCD_TOUCH_SUPPORT} == True
+      name: espressif/esp_lcd_touch
+      registry_url: https://components.espressif.com
+      require: private
+      version: '*'
+    - matches:
+      - if: $CONFIG{ESP_BOARD_DEV_CAMERA_SUPPORT} == True
+      name: espressif/esp_video
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^2.0.0
+    - matches:
+      - if: $CONFIG{ESP_BOARD_DEV_LED_STRIP_SUPPORT} == True
+      name: espressif/led_strip
+      registry_url: https://components.espressif.com
+      require: private
+      version: '*'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 0.5.10
+  espressif/esp_lcd_ili9341:
+    component_hash: 0baab584e0e490511d6bdbae6aa045130424d732ecdaad6cd1d3bd3c0abe2c30
+    dependencies:
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: 0.*
+    - name: idf
+      require: private
+      version: '>=4.4'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 2.0.2
+  espressif/esp_lcd_touch:
+    component_hash: 3f85a7d95af876f1a6ecca8eb90a81614890d0f03a038390804e5a77e2caf862
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.4.2'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.2.1
+  espressif/esp_lcd_touch_cst816s:
+    component_hash: a562ca3238756cca575908ed2cc4da4bab95f3815180b4f01f4c949b658bdd6d
+    dependencies:
+    - name: espressif/esp_lcd_touch
+      registry_url: https://components.espressif.com
+      require: public
+      version: ^1.2.0
+    - name: idf
+      require: private
+      version: '>=5.2'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.1.1~1
+  espressif/esp_lvgl_port:
+    component_hash: b6360960f47b6776462e7092861b3ea66477ffb762a01baa0aecbb3d74cd50f4
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.1'
+    - name: lvgl/lvgl
+      registry_url: https://components.espressif.com
+      require: public
+      version: '>=8,<10'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 2.7.2
+  espressif/i2c_bus:
+    component_hash: 804ec068d163570fd367b279a310ca383484630d2310c586b50def0bcf21de13
+    dependencies:
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: '*'
+    - name: idf
+      require: private
+      version: '>=4.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.5.1
+  idf:
+    source:
+      type: idf
+    version: 6.0.1
+  lvgl/lvgl:
+    component_hash: b702d642e03e95928046d5c6726558e6444e112420c77efa5fdb6650b0a13c5d
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 9.3.0
+direct_dependencies:
+- brookesia/brookesia_app_factory_guide
+- brookesia_app_temperature
+- espressif/esp_board_manager
+- espressif/esp_lcd_ili9341
+- espressif/esp_lcd_touch_cst816s
+- espressif/esp_lvgl_port
+- espressif/i2c_bus
+- idf
+manifest_hash: 079877c293ad7c76375b27410be3f864597e074ade5d725927f59fe1829fa719
+target: esp32c5
+version: 3.0.0
